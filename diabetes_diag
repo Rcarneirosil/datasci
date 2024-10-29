@@ -5,31 +5,38 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt # visualização gráfica
+
 #%%
 # Carregar os dados
 df = pd.read_excel('diabetes_kaggle.xlsx', engine='openpyxl')  # Use o argumento 'engine' para compatibilidade
 
 # Verificar as primeiras linhas
 print(df.head())
+
 #%%
 # Separar variáveis independentes e a variável dependente
 X = df.drop('Outcome', axis=1)
 y = df['Outcome']
+
 #%%
 # Dividir os dados em 70% para treino e 30% para teste
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
 #%%
 # Padronizar as variáveis para melhorar o desempenho do modelo
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
+
 #%%
 # Inicializar e treinar o modelo de regressão logística
 model = LogisticRegression(max_iter=1000)
 model.fit(X_train, y_train)
+
 #%%
 # Fazer previsões no conjunto de teste
 y_pred = model.predict(X_test)
+
 #%%
 # Avaliar o desempenho do modelo
 accuracy = accuracy_score(y_test, y_pred)
