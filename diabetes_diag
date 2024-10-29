@@ -41,8 +41,8 @@ print(classification_report(y_test, y_pred))
 # Matriz de confusão
 print(confusion_matrix(y_test, y_pred))
 
-
-# In[3.7]: Construção de função para a definição da matriz de confusão
+#%%
+#Construção de função para a definição da matriz de confusão
 from sklearn.metrics import confusion_matrix, accuracy_score, ConfusionMatrixDisplay, recall_score
 
 def matriz_confusao(predicts, observado, cutoff):
