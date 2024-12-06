@@ -1,4 +1,4 @@
-Modelo logístico de pré-diagnóstico de diabetes: um estudo de caso com dados do Kaggle
+# Modelo logístico de pré-diagnóstico de diabetes: um estudo de caso com dados do Kaggle
 
 Introdução
 De forma simplificada e acessível, desenvolvi um código que fornece uma prévia de diagnósticos de diabetes com base em variáveis de saúde de mulheres acima de 21 anos. Minha intenção é explorar como a regressão logística pode auxiliar em predições binárias, determinando a classificação do modelo de acordo com a distribuição de Bernoulli (probabilidade do evento e não evento; P e 1 - P).
